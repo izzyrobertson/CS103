@@ -41,6 +41,7 @@ void walk_man() {
     cout << "    / \\" << endl;
 }
 
+
 int main()
 {
     int i;
@@ -49,14 +50,23 @@ int main()
         
     welcome_message();
     draw_hangman();
-
-
-
+    
+    for (i = 0; i < 3; i++) {
+        cout << "\nGuess the missing letter in Yo_bee : ";
+        cin >> guess;
+        if (guess == 'o') {
+            cout << "\n Your guess is correct" << endl;
+        }
+        else {
+            cout << "Sorry your answer is wrong";
+        }
+    } 
     //play(guess); //assign to variable called answer, play() returns if player is correct or wrong after 3 guesses
-    invert_hangman();
-    walk_man();
+    //invert_hangman();
+    //walk_man();
 
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
+
